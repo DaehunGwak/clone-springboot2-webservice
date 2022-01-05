@@ -1,0 +1,21 @@
+POST http://localhost:8080/api/v1/posts
+Content-Type: application/json
+
+{
+  "title": "sample1",
+  "content": "test",
+  "author": "ordi"
+}
+
+###
+GET http://localhost:8080/api/v1/posts/1
+
+
+###
+PUT http://localhost:8080/api/v1/posts/1
+Content-Type: application/json
+
+{
+  "title": "sample1_updated",
+  "content": "updated_content"
+}

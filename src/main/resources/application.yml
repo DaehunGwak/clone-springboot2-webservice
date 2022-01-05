@@ -4,6 +4,11 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+        jdbc.lob.non_contextual_creation: true
   h2:
     console:
       enabled: true # http://localhost:8080/h2-console/
+
+logging:
+  level:
+    org.hibernate.type.descriptor.sql: trace

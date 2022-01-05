@@ -2,10 +2,10 @@ package com.ordi.book.springboot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
-// 자동 설정, Bean 읽기 생성 모두 자동으로 됨
-// 해당 위치 부터 스캔이 되기 때문에 프로젝트 최상단에 위치해야 함
-@SpringBootApplication
+@EnableJpaAuditing // JPA Auditing 활성화
+@SpringBootApplication // 자동 설정, Bean 읽기 생성 모두 자동으로 됨, 해당 위치 부터 스캔이 되기 때문에 프로젝트 최상단에 위치해야 함
 public class Application {
     public static void main(String[] args) {
         // 내장형 WAS 실행 -> 언제 어디서나 같은 환경에서 스프링 부트를 배포할 수 있음

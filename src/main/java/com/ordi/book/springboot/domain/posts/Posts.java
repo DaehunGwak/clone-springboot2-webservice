@@ -1,5 +1,6 @@
 package com.ordi.book.springboot.domain.posts;
 
+import com.ordi.book.springboot.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -12,7 +13,7 @@ import javax.persistence.*;
 @Getter
 @NoArgsConstructor
 @Entity // 필수인걸 클래스 가까이
-public class Posts {
+public class Posts extends BaseTimeEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) // 이걸 붙여야만 auto_increment
